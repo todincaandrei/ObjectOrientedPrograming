@@ -1,4 +1,4 @@
-package ro.itschool.Compozitie;
+package ro.itschool.compozitie;
 
 public class Room {
 

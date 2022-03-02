@@ -25,7 +25,7 @@ public class Main {
         System.out.println("Nume user: " + anonim.nume + " " + anonim.prenume + " varsta:" + anonim.varsta);
 
 
-        Laptop lenovo = new Laptop("black", 144, true);
+
 
 
     }
