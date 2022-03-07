@@ -1,6 +1,8 @@
-package ro.itschool.mostenire;
+package ro.itschool.mostenire.FormeGeometrice;
 
-public class Line extends FormaGeometrica{
+import ro.itschool.mostenire.FormeGeometrice.FormaGeometrica;
+
+public class Line extends FormaGeometrica {
     private double endX;
 
     public Line(double startX, double startY, String color) {

@@ -1,4 +1,8 @@
-package ro.itschool.mostenire;
+package ro.itschool.mostenire.FormeGeometrice;
+
+import ro.itschool.mostenire.FormeGeometrice.Cerc;
+import ro.itschool.mostenire.FormeGeometrice.FormaGeometrica;
+import ro.itschool.mostenire.FormeGeometrice.Line;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ro.itschool.mostenire;
+package ro.itschool.mostenire.FormeGeometrice;
 
 public class FormaGeometrica {
     private double startX;

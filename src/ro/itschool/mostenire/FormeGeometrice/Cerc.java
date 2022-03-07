@@ -1,4 +1,4 @@
-package ro.itschool.mostenire;
+package ro.itschool.mostenire.FormeGeometrice;
 
 public class Cerc extends FormaGeometrica {
     private int raza;
