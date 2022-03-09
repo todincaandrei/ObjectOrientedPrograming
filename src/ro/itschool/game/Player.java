@@ -1,4 +1,4 @@
-package ro.itschool.Game;
+package ro.itschool.game;
 
 public class Player {
 

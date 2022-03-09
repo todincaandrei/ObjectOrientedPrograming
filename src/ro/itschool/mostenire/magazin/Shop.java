@@ -1,4 +1,4 @@
-package ro.itschool.mostenire.Magazin;
+package ro.itschool.mostenire.magazin;
 
 public class Shop {
     private int lenght = 0;

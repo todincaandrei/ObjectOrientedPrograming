@@ -1,4 +1,4 @@
-package ro.itschool.mostenire.Magazin;
+package ro.itschool.mostenire.magazin;
 
 public class Clothes extends Product{
     private String brand;
@@ -36,5 +36,15 @@ public class Clothes extends Product{
     @Override
     public String toString() {
         return this.getName() + " " + this.getBrand() +" " + this.getMaterial() + " " + this.getSize()+" " + this.getPrice() + " lei" ;
+    }
+
+    @Override
+    public String getDescription() {
+        return "Cloth names: " + this.getName() + " from brand " + this.getBrand() + " made from: " + material;
+    }
+
+    @Override
+    public double calculateDiscount() {
+        return 5* getPrice() /100;
     }
 }

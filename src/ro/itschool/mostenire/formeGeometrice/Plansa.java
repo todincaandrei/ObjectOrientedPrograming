@@ -1,6 +1,4 @@
-package ro.itschool.mostenire.FormeGeometrice;
-
-import ro.itschool.mostenire.FormeGeometrice.FormaGeometrica;
+package ro.itschool.mostenire.formeGeometrice;
 
 public class Plansa {
     private FormaGeometrica[] forme = new FormaGeometrica[4];

@@ -1,4 +1,4 @@
-package ro.itschool.mostenire.Object;
+package ro.itschool.mostenire.object;
 
 public class Main {
     public static void main(String[] args) {

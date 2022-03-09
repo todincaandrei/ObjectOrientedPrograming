@@ -1,4 +1,4 @@
-package ro.itschool.mostenire.Magazin;
+package ro.itschool.mostenire.magazin;
 
 import java.util.Scanner;
 
@@ -8,7 +8,6 @@ public class Main {
         Shop shop = new Shop();
         shop.setName("Gabi's shop");
         System.out.println("Welcome to " + shop.getName());
-
 
         int optiune;
         do {
@@ -51,16 +50,10 @@ public class Main {
             if (optiune == 3) {
                 Product[] products = shop.getProducts();
                 for (Product product : products) {
-
                     System.out.println(product.toString());
-
                 }
-
             }
-
-
         } while (optiune != 0);
-
 
     }
 }
