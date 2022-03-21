@@ -5,6 +5,7 @@ public class Zoo {
 
     public void addAnimal(int position, Animal animal) {
         animals[position] = animal;
+
     }
 
     public Animal[] getAnimals() {
