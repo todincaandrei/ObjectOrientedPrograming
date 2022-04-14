@@ -12,32 +12,80 @@ public class CategoryUi {
         int optiune = 0;
 
         do {
-            System.out.println("1.View categories");
-            System.out.println("2.Find category by id");
-            System.out.println("3.View ordered categories");
-            System.out.println("4.Update category");
-            System.out.println("5.Add category");
-            System.out.println("6.remove category");
-            System.out.println("7.Exit");
+            displayMenu();
             optiune = sc.nextInt();
             sc.nextLine();
 
             if (optiune == 1) {
-                List<CategoryModel> categories = categoryService.getAllCategories();
-                for (CategoryModel category : categories) {
-                    System.out.println(category.getId() + " " + category.getName());
-                }
-            }else if (optiune == 5){
-                System.out.println("Enter id of category:");
-                String categoryId = sc.nextLine();
-                System.out.println("Enter name of category:");
-                String name = sc.nextLine();
-                CategoryModel categoryModel = new CategoryModel();
-                categoryModel.setId(categoryId);
-                categoryModel.setName(name);
-                categoryService.addCategory(categoryModel);
-
+                displayCategoriesUi();
+            } else if (optiune == 2) {
+                findCategoryUi();
+            } else if (optiune == 4) {
+                updateUi();
+            } else if (optiune == 5) {
+                addCategoryUi();
+            } else if (optiune == 6) {
+                deleteCategoryUi();
             }
         } while (optiune != 7);
+    }
+
+    private void deleteCategoryUi() {
+        System.out.println("Enter id of category that will be deleted:");
+        String categoryId = sc.nextLine();
+        categoryService.removeCategory(categoryId);
+    }
+
+    private void addCategoryUi() {
+        System.out.println("Enter id of category:");
+        String categoryId = sc.nextLine();
+        System.out.println("Enter name of category:");
+        String name = sc.nextLine();
+        CategoryModel categoryModel = new CategoryModel();
+        categoryModel.setId(categoryId);
+        categoryModel.setName(name);
+        categoryService.addCategory(categoryModel);
+    }
+
+    private void updateUi() {
+        System.out.println("Enter id of category that will be changed:");
+        String idOfCategory = sc.nextLine();
+        System.out.println("Enter new name of category:");
+        String newName = sc.nextLine();
+        CategoryModel categoryModel = new CategoryModel();
+        categoryModel.setId(idOfCategory);
+        categoryModel.setName(newName);
+
+        categoryService.update(categoryModel);
+    }
+
+    private void displayCategoriesUi() {
+        List<CategoryModel> categories = categoryService.getAllCategories();
+        for (CategoryModel category : categories) {
+            System.out.println(category.getId() + " " + category.getName());
+        }
+    }
+
+
+    private void findCategoryUi() {
+        System.out.println("Enter id of category that you want to find:");
+        String idOfCategory = sc.nextLine();
+        try {
+            CategoryModel categoryFound = categoryService.getCategoryById(idOfCategory);
+            System.out.println(categoryFound.getId() + categoryFound.getName());
+
+        } catch (CategoryNotFoundException var) {
+            System.out.println("Category not found!");
+        }
+    }
+
+    private void displayMenu() {
+        System.out.println("1.View categories");
+        System.out.println("2.Find category by id");
+        System.out.println("3.View ordered categories");
+        System.out.println("4.Change name of a category");
+        System.out.println("5.Add category");
+        System.out.println("6.Remove category");
+        System.out.println("7.Exit");
     }
 }
